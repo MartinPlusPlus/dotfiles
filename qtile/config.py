@@ -85,11 +85,11 @@ keys = [
             "amixer -D pulse set Master 5%+")),
     Key([mod], "Up", lazy.spawn("amixer -D pulse set Master 5%+")),
 
-	# Lock screen
-	Key(["control", "mod1"], "l", lazy.spawn("betterlockscreen --lock blur")),
+    # Lock screen
+    Key(["control", "mod1"], "l", lazy.spawn("betterlockscreen --lock blur")),
 
-	# Shut down
-	#Key(["control", "alt", "delete"], "", lazy.spawn("shutdown now")),
+    # Shut down
+    # Key(["control", "alt", "delete"], "", lazy.spawn("shutdown now")),
 ]
 
 groups = [Group(i) for i in "123456789"]
