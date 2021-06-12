@@ -17,6 +17,7 @@ home_path = os.path.expanduser("~")
 def autostart():
     start_script = os.path.expanduser('~/.config/qtile/autostart.sh')
     subprocess.call([start_script])
+    subprocess.call([os.path.expanduser('~/.config/dotfiles/trackpad.sh')])
 
 
 keys = [
