@@ -1,3 +1,5 @@
+# Reload config using <mod> + ctrl + r
+
 import os
 import subprocess
 
@@ -14,9 +16,9 @@ home_path = os.path.expanduser("~")
 # Autostart
 
 @hook.subscribe.startup_once
-def autostart():
-    start_script = os.path.expanduser('~/.config/qtile/autostart.sh')
-    subprocess.call([start_script])
+def startup_once():
+    home = os.path.expanduser('/home/martin/.config/qtile/autostart.sh')
+    subprocess.call([home])
     subprocess.call([os.path.expanduser('~/.config/dotfiles/trackpad.sh')])
 
 
