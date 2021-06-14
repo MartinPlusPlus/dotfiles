@@ -79,14 +79,11 @@ keys = [
     Key([mod], "r", lazy.spawn("ulauncher")),
 
     # Sound
-    Key([], "XF86AudioMute", lazy.spawn("amixer -q set Master toggle")),
-    Key([mod], "F8", lazy.spawn("amixer -q set Master toggle")),
+    Key([], "XF86AudioMute", lazy.spawn("pamixer -t")),
     Key([], "XF86AudioLowerVolume", lazy.spawn(
-            "amixer -D pulse set Master 5%-")),
-    Key([mod], "Down", lazy.spawn("amixer -D pulse set Master 5%-")),
+            "pamixer -d 5")),
     Key([], "XF86AudioRaiseVolume", lazy.spawn(
-            "amixer -D pulse set Master 5%+")),
-    Key([mod], "Up", lazy.spawn("amixer -D pulse set Master 5%+")),
+            "pamixer -i 5")),
 
     # Lock screen
     Key(["control", "mod1"], "l", lazy.spawn("betterlockscreen --lock blur")),
