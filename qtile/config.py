@@ -86,7 +86,7 @@ keys = [
             "pamixer -i 5")),
 
     # Lock screen
-    Key(["control", "mod1"], "l", lazy.spawn("betterlockscreen --lock blur")),
+    Key(["control", "mod1"], "l", lazy.spawn("i3lock-fancy-rapid 5 3")),
 
     # Shut down
     # Key(["control", "alt", "delete"], "", lazy.spawn("shutdown now")),
@@ -160,7 +160,7 @@ screens = [
                 widget.Systray(),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
                 widget.Battery(charge_char='+', discharge_char='-'),
-                widget.QuickExit(),
+                widget.QuickExit(countdown_start=1),
             ],
             30,
             background="#2a2e36",
