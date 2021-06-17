@@ -1,3 +1,5 @@
 pamixer: for audio control
 qtile: tiling window manager
+picom: compositor
+i3: tiling window manager
 
