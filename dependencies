@@ -2,4 +2,7 @@ pamixer: for audio control
 qtile: tiling window manager
 picom: compositor
 i3: tiling window manager
-
+neovim: text editor
+polybar: a status bar
+powerline10k: cool terminal prompt for zsh
+zsh: bash replacement
