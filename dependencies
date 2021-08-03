@@ -6,3 +6,4 @@ neovim: text editor
 polybar: a status bar
 powerline10k: cool terminal prompt for zsh
 zsh: bash replacement
+drun: application runner

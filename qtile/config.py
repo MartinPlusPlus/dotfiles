@@ -76,7 +76,7 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     #Key([mod], "r", lazy.spawncmd(),
     #    desc="Spawn a command using a prompt widget"),
-    Key([mod], "r", lazy.spawn("ulauncher")),
+    Key([mod], "d", lazy.spawn("rofi -show drun -theme solarized")),
 
     # Sound
     Key([], "XF86AudioMute", lazy.spawn("pamixer -t")),
