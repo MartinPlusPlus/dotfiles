@@ -119,7 +119,7 @@ layouts = [
     layout.Columns(
         #border_width=0, margin=8),
         border_width=0,
-        margin-[10, 10, 10, 10],
+        margin=[10, 10, 10, 10],
         font="Fira Code",
         fontsize=10,
     ),
@@ -180,22 +180,18 @@ screens = [
                     #emoji=True
                 ),
                 separator,
-                #widget.Chord(
-                #    chords_colors={
-                #        'launch': ("#ff0000", "#ffffff"),
-                #    },
-                #    name_transform=lambda name: name.upper(),
-                #),
                 widget.TextBox("Current layout:"),
                 widget.CurrentLayout(),
                 widget.Memory(measure_mem='M'),
                 widget.TextBox("Keyboard Layout: "),
-                widget.KeyboardLayout(configured_keyboards=[
-                                      'us', 'de', 'da', 'us ru', 'ar']),
+                widget.KeyboardLayout(),
+                separator,
                 widget.Systray(),
+                separator,
+                widget.Battery(charge_char='+', discharge_char='-'),
+                separator,
                 widget.Clock(format='%a %I:%M %p',
                              padding=10,),
-                widget.Battery(charge_char='+', discharge_char='-'),
             ],
             30,
             margin=[10, 10, 0, 10],
