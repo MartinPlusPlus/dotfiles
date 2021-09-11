@@ -9,6 +9,10 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
+from colors import Colors
+
+palette = Colors()
+
 mod = "mod4"
 terminal = guess_terminal()
 home_path = os.path.expanduser("~")
@@ -112,7 +116,13 @@ for i in groups:
 
 layouts = [
     #layout.Columns(border_focus_stack='#d75f5f', margin=8),
-    layout.Columns(border_width=0, margin=8),
+    layout.Columns(
+        #border_width=0, margin=8),
+        border_width=0,
+        margin-[10, 10, 10, 10],
+        font="Fira Code",
+        fontsize=10,
+    ),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -128,29 +138,54 @@ layouts = [
 ]
 
 widget_defaults = dict(
-    font='sans',
-    fontsize=12,
-    padding=3,
+    font='Fira Code',
+    fontsize=11,
+    padding=7,
 )
 extension_defaults = widget_defaults.copy()
+
+# Separator Widget
+separator = widget.Sep(forground=palette.DARK)
 
 screens = [
     Screen(
         top=bar.Bar(
             [
-                # widget.Wallpaper(directory="~/Pictures/Wallpapers/lighthouse.jpg"),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                # widget.TextBox("Press &lt;M-r&gt; to spawn",
-                #               foreground="#d75f5f"),
-                widget.Chord(
-                    chords_colors={
-                        'launch': ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
+                widget.GroupBox(
+                    fontsize=12,
+                    padding_x=5,
+                    borderwidth=0,
+                    active=palette.WHITE,
+                    inactive=palette.WHITE,
+                    rounded=True,
+                    font="Fira Code",
+                    highlight_method="block",
+                    highlight_color=palette.DARK,
+                    block_highlight_text_color=palette.WHITE,
+                    this_current_screen_border=palette.SECONDARY,
+                    foreground=palette.DARK,
+                    background=palette.DARK,
+                    hide_unused=True
                 ),
-                #widget.TextBox("default config", name="default"),
+                widget.Prompt(),
+                widget.Spacer(),
+                widget.WindowName(
+                    fontsize=10,
+                    font="Fira Code",
+                    format='{name}'
+                ),
+                widget.Spacer(),
+                separator,
+                widget.PulseVolume(
+                    #emoji=True
+                ),
+                separator,
+                #widget.Chord(
+                #    chords_colors={
+                #        'launch': ("#ff0000", "#ffffff"),
+                #    },
+                #    name_transform=lambda name: name.upper(),
+                #),
                 widget.TextBox("Current layout:"),
                 widget.CurrentLayout(),
                 widget.Memory(measure_mem='M'),
@@ -158,12 +193,14 @@ screens = [
                 widget.KeyboardLayout(configured_keyboards=[
                                       'us', 'de', 'da', 'us ru', 'ar']),
                 widget.Systray(),
-                widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
+                widget.Clock(format='%a %I:%M %p',
+                             padding=10,),
                 widget.Battery(charge_char='+', discharge_char='-'),
-                widget.QuickExit(countdown_start=1),
             ],
             30,
-            background="#2a2e36",
+            margin=[10, 10, 0, 10],
+            background=palette.DARK,
+            opacity=1,
         ),
     ),
 ]
