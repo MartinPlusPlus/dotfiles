@@ -73,13 +73,11 @@ source $ZSH/oh-my-zsh.sh
 # Some funky github ssh stuff:
 
 # Check if ssh-agent is running, if not, dew it
-echo "Before SSH Agent Conditional Block"
 if [ -z "$(pgrep ssh-agent)" ]; then
     echo "Starting SSH Agent"
     eval "$(ssh-agent -s)" > /dev/null 2>&1
     ssh-add ~/.ssh/github > /dev/null 2>&1
 fi
-echo "After SSH Agent Conditional Block"
 
 # To see if ssh-agent is running already:
 # ps aux | grep ssh # You can kill it if it is a problem
