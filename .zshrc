@@ -71,6 +71,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 # Some funky github ssh stuff:
+ssh-add ~/.ssh/github &>/dev/null
  
 # To see if ssh-agent is running already:
 # ps aux | grep ssh # You can kill it if it is a problem
