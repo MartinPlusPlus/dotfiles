@@ -22,8 +22,8 @@ home_path = os.path.expanduser("~")
 # Autostart
 @hook.subscribe.startup_once
 def startup_once():
-    home = os.path.expanduser('/home/martin/.config/qtile/autostart.sh')
-    subprocess.call([home])
+    autostart = os.path.expanduser('/home/martin/.config/qtile/autostart.sh')
+    subprocess.call([autostart])
     subprocess.call([os.path.expanduser('~/.config/dotfiles/trackpad.sh')])
 
 # Keyboard layouts
