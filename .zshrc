@@ -68,7 +68,12 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+## User configuration ##
+
+# Spotify
+if ! pgrep -x spotifyd > /dev/null; then
+    spotifyd
+fi
 
 # Some funky github ssh stuff:
 
@@ -84,6 +89,7 @@ source $ZSH/oh-my-zsh.sh
 alias rustnew="cargo new --bin"
 alias cleanup="yay -Rns $(pacman -Qdtq)"
 alias config="git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME"
+alias monitor="mons -e"
 
 source ~/.themes/powerlevel10k/powerlevel10k.zsh-theme
 
