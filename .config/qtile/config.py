@@ -27,17 +27,16 @@ def startup_once():
     subprocess.call([os.path.expanduser('~/.config/dotfiles/trackpad.sh')])
 
 # Keyboard layouts
-#keyboard_widget = widget.KeyboardLayout(configured_keyboards['us', 'cn'])
-
-@lazy.function
-def next_keyboard(qtile):
-    keyboard_widget.cmd_next_keyboard()
+keyboards = ['us', 'es']
 
 # Keyboard shortcuts
 keys = [
     # Switch keyboard layouts
     # Key(["control", mod], "space", lazy.spawn(home_path + "/.config/keyboard_layout/prev_layout.sh")),
-    Key([mod], "space", next_keyboard),
+    Key([mod], "space", lazy.widget["keyboardlayout"].next_keyboard()),
+
+    # Toggle floating
+    Key([mod], "t", lazy.window.toggle_floating()),
 
     # Change brightness
     Key([], "XF86MonBrightnessUp", lazy.spawn("xbacklight -inc 10")),
@@ -183,7 +182,7 @@ screens = [
                     format='{name}'
                 ),
                 widget.Spacer(),
-                widget.KeyboardLayout(),
+                widget.KeyboardLayout(configured_keyboard=keyboards),
                 widget.CurrentLayout(),
                 widget.Memory(measure_mem='M'),
                 separator,
