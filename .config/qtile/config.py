@@ -47,8 +47,6 @@ keys = [
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
     Key([mod], "k", lazy.layout.up(), desc="Move focus up"),
-    #Key([mod], "space", lazy.layout.next(),
-    #    desc="Move window focus to other window"),
 
     # Move windows between left/right columns or move up/down in current stack.
     # Moving out of range in Columns layout will create new column.
@@ -77,6 +75,8 @@ keys = [
     # multiple stack panes
     Key([mod, "shift"], "Return", lazy.layout.toggle_split(),
         desc="Toggle between split and unsplit sides of stack"),
+    
+    # Launch Terminal
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 
     # Toggle between different layouts as defined below
@@ -104,7 +104,6 @@ keys = [
 ]
 
 groups = [Group(i) for i in "123456789"]
-#groups = [Group(i) for i in range(6)]
 
 for i in groups:
     keys.extend([
@@ -137,7 +136,7 @@ layouts = [
     # layout.Matrix(),
     # layout.MonadTall(),
     # layout.MonadWide(),
-    layout.RatioTile(margin=10),
+    layout.RatioTile(margin=5),
     # layout.Tile(),
     # layout.TreeTab(),
     # layout.VerticalTile(),
