@@ -90,6 +90,7 @@ alias rustnew="cargo new --bin"
 alias cleanup="yay -Rns $(pacman -Qdtq)"
 alias config="git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME"
 alias monitor="mons -e"
+alias spt="spotifyd && spt"
 
 source ~/.themes/powerlevel10k/powerlevel10k.zsh-theme
 
@@ -98,11 +99,13 @@ source ~/.themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # ENV Variables
 export ANDROID_HOME="/opt/android"
-export CHROME_EXECUTABLE="/opt/google/chrome-unstable/google-chrome"
+#export CHROME_EXECUTABLE="/opt/google/chrome-unstable/google-chrome"
+export CHROME_EXECUTABLE="/usr/bin/brave"
 export GTK_IM_MODUlE='fcitx'
 export QT_IM_MODULE='fcitx'
 export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
+export JAVA_HOME="/usr/lib/jvm/java-21-openjdk"
 
 # PATH
 export PATH="$PATH:/home/martin/.local/bin"
