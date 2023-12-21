@@ -1,0 +1,49 @@
+" Specify a directory for plugins
+" To install the plugins, run the following:
+" 	:PlugInstall
+" 	:UpdateRemotePlugins
+call plug#begin()
+"Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'tpope/vim-fugitive',                   " Git integration in to nvim
+Plug 'vim-airline/vim-airline',
+Plug 'vim-airline/vim-airline-themes',
+Plug 'sheerun/vim-polyglot',
+Plug 'farmergreg/vim-lastplace'             " Continue from where you left last time
+Plug 'tpope/vim-markdown'                   " Markdown runtime files
+Plug 'scrooloose/nerdtree',
+Plug 'scrooloose/syntastic',
+Plug 'tpope/vim-surround',
+Plug 'scrooloose/nerdcommenter',
+Plug 'scrooloose/nerdtree'                  " File navigator
+Plug 'jiangmiao/auto-pairs',
+Plug 'Yggdroot/indentline',
+Plug 'conormcd/matchindent.vim',
+Plug 'raimondi/delimitmate'                 " Provides insert mode auto-completion for special-characters
+Plug 'alvan/vim-closetag'                   " Makes a close tag for html quickly
+Plug 'luochen1990/rainbow'                  " Provides different colors to different paranthesis
+Plug 'airblade/vim-gitgutter'               " Shows git diffs in the sign columns
+Plug 'lilydjwg/colorizer'                   " Provides color for the #rrggbb or #rgb color format in files
+Plug 'ryanoasis/vim-devicons'               " Icons
+Plug 'SirVer/ultisnips'                     " Code completion using snippets from vim-snippets and custom snippets
+Plug 'honza/vim-snippets'                   " Provides snippets for ultisnips
+call plug#end()
+
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
+let g:deoplete#enable_at_startup=1
+let g:syntastic_python_checkers = ['flake8']
+
+"packadd! dracula
+"colorscheme dracula
+"syntax enable
+set number
+set expandtab
+set shiftwidth=4
+set tabstop=4
+
+" NERDTree
+nnoremap <C-f> :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <A-h> :vsplit<CR>
+nnoremap <A-k> :split<CR>
