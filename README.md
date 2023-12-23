@@ -5,6 +5,7 @@ Welcome
 
 - Make sure to ``` git clone --bare ```
 - Then ```mv``` the repo to ```~/.config/dotfiles``` (not including the ```dotfiles.git``` folder itself
+- Move all the corresponding folders to their designated locations (need to make a script or something to do this automatically)
 
 ## Usage
 - To update the repo (from anywhere on the system), use ```config``` in place of ```git```
