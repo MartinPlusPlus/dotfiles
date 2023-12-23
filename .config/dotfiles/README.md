@@ -1,5 +1,5 @@
 # dotfiles
-My personal dotfiles
+My personal dotfiles, repo idea based off of: https://stegosaurusdormant.com/bare-git-repo/
 
 ## NOTES
 This is a bare git repo. To update, use the 'config' command with any git command
