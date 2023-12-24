@@ -11,3 +11,6 @@ This is a bare git repo. To update, use the 'config' command with any git comman
     `config config --local status.showUntrackedFiles no`
 
 This should allow you to use the `config` command
+
+## Syncthing
+I highly recommend using syncthing if you want to sync files between devices. [Checkout this video for help](https://www.youtube.com/watch?v=PSx-BkMOPF4)
