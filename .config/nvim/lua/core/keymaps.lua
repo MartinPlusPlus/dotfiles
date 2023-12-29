@@ -16,3 +16,7 @@ vim.opt.expandtab = true
 
 -- this makes it so when you press <space> + h, it clears highlighting
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>') 
+vim.keymap.set('n', '<leader>nf', function() 
+    local search = vim.fn.input("Newfile > ")
+    vim.cmd("e %:h/" .. search)
+end)
