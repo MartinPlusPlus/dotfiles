@@ -9,13 +9,14 @@ This is a bare git repo. To update, use the 'config' command with any git comman
     * This will make sure it is a 'bare' repository and enable the `config` command functionality
 * Move the contents of the repo to ~/.config/dotfiles (this is where my zshrc will look)
 
-## Setup 'config' command
+## 'config' command
 * Make sure the following is in your favorite .rc:
     `alias config='git --git-dir=<path to git folder> --work-tree=$HOME'`
 * Execute the following (after refreshing said .rc)
     `config config --local status.showUntrackedFiles no`
 
 This should allow you to use the `config` command
+* To add all tracked files, use `config addtracked`. This will prevent git from adding any untracked files (as opposed to using `config add .`)
 
 ## Syncthing
 I highly recommend using syncthing if you want to sync files between devices. [Checkout this video for help](https://www.youtube.com/watch?v=PSx-BkMOPF4)
