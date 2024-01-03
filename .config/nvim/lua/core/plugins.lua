@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
         tag = '0.1.4',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+<<<<<<< HEAD
     use 'theprimeagen/harpoon'
     use 'mbbill/undotree'
     use 'tpope/vim-fugitive'
@@ -48,6 +49,14 @@ return require('packer').startup(function(use)
             {'L3MON4D3/LuaSnip'},
             {'rafamadriz/friendly-snippets'},
         }
+=======
+    use {
+        "kylechui/nvim-surround",
+        tag = "*",
+        config = function()
+            require("nvim-surround").setup({})
+        end
+>>>>>>> 3420a95 (added nvim surround)
     }
     --
     -- Automatically set up your configuration after cloning packer.nvim
