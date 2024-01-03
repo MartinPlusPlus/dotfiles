@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 [font]
 size = 15
 
+=======
+>>>>>>> 02bbb75 (migrated alacritty)
 [font.normal]
 family = "MesloLGS NF"
 
