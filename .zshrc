@@ -67,6 +67,7 @@ ENABLE_CORRECTION="false"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
+source /usr/share/nvm/init-nvm.sh
 
 ## User configuration ##
 
