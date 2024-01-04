@@ -9,6 +9,13 @@ This is a bare git repo. To update, use the 'config' command with any git comman
     * This will make sure it is a 'bare' repository and enable the `config` command functionality
 * Move the contents of the repo to ~/.config/dotfiles (this is where my zshrc will look)
 
+## Prereqs
+Note: I haven't finished making this list yet, hold tight
+* zsh
+* nvm
+* neovim
+* spotifyd
+
 ## 'config' command
 * Make sure the following is in your favorite .rc:
     `alias config='git --git-dir=<path to git folder> --work-tree=$HOME'`
