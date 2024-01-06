@@ -42,6 +42,9 @@ keys = [
     Key([], "XF86MonBrightnessUp", lazy.spawn("xbacklight -inc 10")),
     Key([], "XF86MonBrightnessDown", lazy.spawn("xbacklight -dec 10")),
 
+    # Maximize windows
+    Key([mod], "m", lazy.window.toggle_maximize(), desc="Toggle maximize"),
+
     # Switch between windows
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
@@ -181,7 +184,7 @@ screens = [
                     format='{name}'
                 ),
                 widget.Spacer(),
-                widget.KeyboardLayout(configured_keyboard=keyboards),
+                #widget.KeyboardLayout(configured_keyboard=keyboards),
                 widget.CurrentLayout(),
                 widget.Memory(measure_mem='M'),
                 separator,
@@ -189,7 +192,7 @@ screens = [
                     get_volume_command="pamixer --get-volume"
                 ),
                 widget.Systray(padding=0),
-                widget.Battery(charge_char='+', discharge_char='-'),
+                #widget.Battery(charge_char='+', discharge_char='-'),
                 separator,
                 widget.Clock(format='%a %I:%M %p',
                              padding=10,),
