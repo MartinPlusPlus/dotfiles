@@ -23,7 +23,10 @@ Note: I haven't finished making this list yet, hold tight
     `config config --local status.showUntrackedFiles no`
 
 This should allow you to use the `config` command
-* To add all tracked files, use `config addtracked`. This will prevent git from adding any untracked files (as opposed to using `config add .`)
+* I recommend adding an `[alias]` to make adding all change files (that are also being tracked) easier.
+    * Add this to the config file in the `dotfiles` directory: `addtracked = !git add $(git ls-files)`
+    * It can be a headache when you use `git add .` by accident so, this is highly recommended
+    * To add all tracked files, use `config addtracked`. This will prevent git from adding any untracked files (as opposed to using `config add .`)
 
 ## Syncthing
 I highly recommend using syncthing if you want to sync files between devices. [Checkout this video for help](https://www.youtube.com/watch?v=PSx-BkMOPF4)
