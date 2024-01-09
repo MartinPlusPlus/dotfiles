@@ -92,6 +92,7 @@ alias cleanup="yay -Rns $(pacman -Qdtq)"
 alias config="git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME"
 alias monitor="mons -e"
 alias spt="spotifyd && spt"
+alias todo="cat ~/Documents/TODO.txt"
 
 source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
