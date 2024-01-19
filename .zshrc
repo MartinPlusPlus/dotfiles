@@ -108,6 +108,7 @@ export QT_IM_MODULE='fcitx'
 export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
 export JAVA_HOME="/usr/lib/jvm/java-21-openjdk"
+export CS111="/home/martin/Documents/School/Winter 2024/CS 111/CS111-repo/"
 
 # PATH
 export PATH="$PATH:/home/martin/.local/bin"
