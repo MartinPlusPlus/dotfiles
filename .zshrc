@@ -100,8 +100,6 @@ source ~/.powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # ENV Variables
-export ANDROID_HOME="/opt/android"
-#export CHROME_EXECUTABLE="/opt/google/chrome-unstable/google-chrome"
 export CHROME_EXECUTABLE="/usr/bin/brave"
 export GTK_IM_MODUlE='fcitx'
 export QT_IM_MODULE='fcitx'
