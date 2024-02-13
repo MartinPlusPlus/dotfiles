@@ -86,19 +86,6 @@ fi
 # To see if ssh-agent is running already:
 # ps aux | grep ssh # You can kill it if it is a problem
 
-# Aliases
-alias rustnew="cargo new --bin"
-alias cleanup="yay -Rns $(pacman -Qdtq)"
-alias config="git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME"
-alias monitor="mons -e"
-alias spt="spotifyd && spt"
-alias todo="cat ~/Documents/TODO.txt"
-
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
 # ENV Variables
 export CHROME_EXECUTABLE="/usr/bin/brave"
 export GTK_IM_MODUlE='fcitx'
@@ -107,6 +94,24 @@ export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
 export JAVA_HOME="/usr/lib/jvm/java-21-openjdk"
 export CS111="/home/martin/Documents/School/Winter 2024/CS 111/CS111-repo/"
+
+# Aliases
+alias rustnew="cargo new --bin"
+alias cleanup="yay -Rns $(pacman -Qdtq)"
+alias config="git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME"
+alias monitor="mons -e"
+alias spt="spotifyd && spt"
+alias todo="cat ~/Documents/TODO.txt"
+CS111() {
+    cd $CS111 
+    source bin/activate
+}
+
+source ~/.powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
 # PATH
 export PATH="$PATH:/home/martin/.local/bin"
