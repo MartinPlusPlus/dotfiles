@@ -120,4 +120,3 @@ export PATH="$PATH:/opt/android/bin"
 export PATH="$PATH:/opt/pulsar"
 
 # Commands to run on init 
-afetch
