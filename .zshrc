@@ -94,6 +94,7 @@ export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
 export JAVA_HOME="/usr/lib/jvm/java-22-openjdk"
 export CS111="/home/martin/Documents/School/Winter 2024/CS 111/CS111-repo/"
+export GOPATH=/home/martin/.go
 
 # espup exports
 export LIBCLANG_PATH="/home/martin/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-16.0.4-20231113/esp-clang/lib"
@@ -101,6 +102,7 @@ export PATH="/home/martin/.rustup/toolchains/esp/xtensa-esp-elf/esp-13.2.0_20230
 
 # Aliases
 alias rustnew="cargo new --bin"
+alias ccomp="gcc main.c -o main"
 alias cleanup="yay -Rns $(pacman -Qdtq)"
 alias config="git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME"
 alias monitor="mons -e"
@@ -123,5 +125,6 @@ export PATH="$PATH:/opt/flutter/bin"
 export PATH="$PATH:/opt/android/bin"
 export PATH="$PATH:/opt/pulsar"
 export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.go/bin"
 
 # Commands to run on init 
