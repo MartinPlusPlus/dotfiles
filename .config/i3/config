@@ -24,12 +24,20 @@ set $home /home/martin
 # AUTOSTART #
 #############
 
-exec --no-startup-id feh --bg-scale $home/Pictures/wallpapers/valley.jpg &
+# exec --no-startup-id feh --bg-scale $home/Pictures/wallpapers/valley.jpg &
 exec --no-startup-id picom --config /home/martin/.config/picom/picom.conf & 
 exec --no-startup-id $HOME/.config/dotfiles/trackpad.sh
 exec --no-startup-id nm-applet &
 exec --no-startup-id eval `ssh-agent -s`
 exec --no-startup-id ssh-add $HOME/.ssh/github
+
+
+###########
+# AUTORUN #
+###########
+
+exec_always --no-startup-id ~/.config/i3/wallpaper_slideshow.sh
+
 
 ########
 # GAPS #
@@ -46,6 +54,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
 
 ##############
 # Screenshot #
