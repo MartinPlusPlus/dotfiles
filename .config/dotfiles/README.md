@@ -11,10 +11,16 @@ This is a bare git repo. To update, use the 'config' command with any git comman
 
 ## Prereqs
 Note: I haven't finished making this list yet, hold tight
+    - I might add a script to install these automatically
 * zsh
 * nvm
 * neovim
 * spotifyd
+* i3
+* notify-osd
+* polybar
+* qtile
+    - python3
 
 ## 'config' command
 * Make sure the following is in your favorite .rc:
