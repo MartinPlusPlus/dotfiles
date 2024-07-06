@@ -57,8 +57,8 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = mpd
-modules-right = filesystem pulseaudio xkeyboard memory cpu battery temperature date powermenu
-; Other modules: alsa xbacklight wlan eth
+modules-right = filesystem pulseaudio xkeyboard memory cpu temperature date battery 
+; Other modules: alsa xbacklight wlan eth powermenu 
 
 tray-position = center 
 tray-padding = 2
@@ -339,7 +339,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
 type = internal/battery
-battery = BAT1
+battery = BAT0
 adapter = ACAD
 full-at = 98
 
