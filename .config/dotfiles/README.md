@@ -20,6 +20,7 @@ Note: I haven't finished making this list yet, hold tight
 * notify-osd
 * polybar
 * qtile
+* brightnessctl
     - python3
 
 ## 'config' command
