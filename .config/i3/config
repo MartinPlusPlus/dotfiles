@@ -18,14 +18,14 @@ set $resize 5
 font pango:monospace 8
 
 # Home dir
-set $home /home/martin
+set $HOME /home/martin
 
 #############
 # AUTOSTART #
 #############
 
 # exec --no-startup-id feh --bg-scale $home/Pictures/wallpapers/valley.jpg &
-exec --no-startup-id picom --config /home/martin/.config/picom/picom.conf & 
+exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf & 
 exec --no-startup-id $HOME/.config/dotfiles/trackpad.sh
 exec --no-startup-id nm-applet &
 exec --no-startup-id eval `ssh-agent -s`
@@ -88,8 +88,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Change screen brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
 
 ###########################
 # Window control keybinds #
@@ -106,7 +106,7 @@ bindsym $mod+w kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
-bindsym $mod+r exec --no-startup-id rofi -show drun -theme solarized
+bindsym $mod+d exec --no-startup-id rofi -show drun -theme solarized
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
@@ -146,7 +146,7 @@ bindsym Control+$mod+h split h
 bindsym Control+$mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Tab fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
