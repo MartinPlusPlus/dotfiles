@@ -36,7 +36,7 @@ exec --no-startup-id ssh-add $HOME/.ssh/github
 # AUTORUN #
 ###########
 
-exec_always --no-startup-id ~/.config/i3/wallpaper_slideshow.sh
+exec_always --no-startup-id ~/.config/i3/wallpaper_slideshow
 
 
 ########
