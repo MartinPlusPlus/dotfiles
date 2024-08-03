@@ -46,7 +46,8 @@ exec_always --no-startup-id ~/.config/i3/wallpaper_slideshow
 for_window [class=".*"] border pixel 0
 
 smart_gaps on
-gaps inner 15
+gaps inner 10
+gaps outer 0
 
 # Not quite sure what this does, something about transfering a file to i3lock
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
