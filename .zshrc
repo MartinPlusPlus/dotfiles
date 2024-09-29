@@ -95,6 +95,7 @@ export XMODIFIERS='@im=fcitx'
 export JAVA_HOME="/usr/lib/jvm/java-22-openjdk"
 export CS111="/home/martin/Documents/School/Winter 2024/CS 111/CS111-repo/"
 export GOPATH=/home/martin/.go
+export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 
 # espup exports
 export LIBCLANG_PATH="/home/martin/.rustup/toolchains/esp/xtensa-esp32-elf-clang/esp-16.0.4-20231113/esp-clang/lib"
