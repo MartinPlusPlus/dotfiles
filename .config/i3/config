@@ -210,7 +210,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Control+Shift+Return exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 # Shutdown computer
-# bindsym $mod+control+Shift+Return exec shutdown now
+bindsym $mod+Control+Shift+Delete exec shutdown now
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
