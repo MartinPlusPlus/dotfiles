@@ -109,6 +109,7 @@ alias config="git --git-dir=$HOME/.config/dotfiles/ --work-tree=$HOME"
 alias monitor="mons -e"
 alias spt="spotifyd && spt"
 alias todo="cat ~/Documents/TODO.txt"
+alias qemu="qemu-system-x86_64"
 CS111() {
     cd $CS111 
     source bin/activate
