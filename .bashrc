@@ -2,6 +2,8 @@
 # ~/.bashrc
 #
 
+export QT_SCALE_FACTOR=1
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 

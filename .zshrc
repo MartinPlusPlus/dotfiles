@@ -90,6 +90,7 @@ fi
 export CHROME_EXECUTABLE="/usr/bin/brave"
 export GTK_IM_MODUlE='fcitx'
 export QT_IM_MODULE='fcitx'
+export QT_SCALE_FACTOR=1
 export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
 export JAVA_HOME="/usr/lib/jvm/java-22-openjdk"
@@ -102,7 +103,6 @@ export LIBCLANG_PATH="/home/martin/.rustup/toolchains/esp/xtensa-esp32-elf-clang
 export PATH="/home/martin/.rustup/toolchains/esp/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin:$PATH"
 
 # Aliases
-alias yay="sudo -v && yay -Syu"
 alias rustnew="cargo new --bin"
 alias ccomp="gcc main.c -o main"
 alias cleanup="yay -Rns $(pacman -Qdtq)"
