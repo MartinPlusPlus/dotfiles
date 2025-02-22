@@ -131,3 +131,6 @@ export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.go/bin"
 
 # Commands to run on init 
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/martin/.lmstudio/bin"
