@@ -22,6 +22,9 @@ Note: I haven't finished making this list yet, hold tight
 * qtile
 * brightnessctl
     - python3
+Note: to install packages from a file in arch linux you can use the following command:
+`sudo pacman -S --needed - < packages.txt`
+You just need create a file names `packages.txt` and write package names in line-by-line
 
 ## 'config' command
 * Make sure the following is in your favorite .rc:
