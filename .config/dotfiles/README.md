@@ -21,7 +21,8 @@ Note: I haven't finished making this list yet, hold tight
 * polybar
 * qtile
 * brightnessctl
-    - python3
+  - python3
+
 Note: to install packages from a file in arch linux you can use the following command:
 `sudo pacman -S --needed - < packages.txt`
 You just need create a file names `packages.txt` and write package names in line-by-line
