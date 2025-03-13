@@ -111,12 +111,8 @@ alias monitor="mons -e"
 alias spt="spotifyd && spt"
 alias todo="cat ~/Documents/TODO.txt"
 alias qemu="qemu-system-x86_64"
-CS111() {
-    cd $CS111 
-    source bin/activate
-}
 
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
