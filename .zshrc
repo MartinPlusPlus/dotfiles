@@ -130,3 +130,6 @@ export PATH="$PATH:$HOME/.go/bin"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/home/martin/.lmstudio/bin"
+
+# Conda
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
