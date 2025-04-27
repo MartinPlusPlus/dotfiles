@@ -134,3 +134,6 @@ export PATH="$PATH:/home/martin/.lmstudio/bin"
 
 # Conda
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+
+# Enable starship promopt
+eval "$(starship init zsh)"
