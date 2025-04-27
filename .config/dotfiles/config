@@ -5,11 +5,11 @@
 [remote "origin"]
 	url = git@github.com:MartinPlusPlus/dotfiles.git
 [status]
-    showUntrackedFiles = no
+	showUntrackedFiles = no
 [branch "master"]
-    remote = origin
-    merge = refs/heads/master
+	remote = origin
+	merge = refs/heads/master
 [pull]
-    rebase = true
+	rebase = true
 [alias]
-    addtracked = !git add $(git ls-files)
+  addtracked = !git add $(git ls-files)
