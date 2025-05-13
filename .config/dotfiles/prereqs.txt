@@ -1,0 +1,10 @@
+zsh
+nvm
+nvim
+spotifyd
+i3
+notify-osd
+polybar
+qtile
+brightnessctl
+python3
