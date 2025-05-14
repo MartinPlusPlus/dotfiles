@@ -42,7 +42,7 @@ fi
 while IFS= read -r package; do
 	echo "read $package"
 	eval "$pacman $package"
-	packages["$package"] = "$?"
+	packages["$package"]="$?"
 done < prereqs.txt
 
 for key in "${!packages[@]}"; do
