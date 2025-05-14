@@ -8,7 +8,5 @@ cp .zshrc $HOME
 cp .p10k.zsh $HOME
 cp .bashrc $HOME
 
-cd $HOME/.config/ 
+cd $HOME/.config/dotfiles 
 cp config.example config
-
-chsh $USER /usr/bin/zsh
