@@ -9,4 +9,5 @@ cp .p10k.zsh $HOME
 cp .bashrc $HOME
 
 cd $HOME/.config/dotfiles 
+mv config config.bak
 cp config.example config
