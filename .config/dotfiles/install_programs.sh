@@ -27,14 +27,14 @@ elif [ "$NAME" == "Arch Linux" ]; then
 		failure "pacman is not available on this system."
 		exit 1
 	else
-		pacman="pacman -S --noconfirm "
+		pacman="pacman -S --noconfirm --needed "
 
 		if ! which yay >/dev/null 2>&1; then
 			failure "yay is not installed, installing..."
 			# TODO: Install yay
 		else
 			yay -Sy --noconfirm
-			pacman="yay -S --noconfirm "
+			pacman="yay -S --noconfirm --needed "
 		fi
 	fi
 fi
