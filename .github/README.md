@@ -1,43 +1,31 @@
 # dotfiles
-My personal dotfiles, repo idea based off of: https://stegosaurusdormant.com/bare-git-repo/
+My personal dotfiles, repo idea based off of: [https://stegosaurusdormant.com/bare-git-repo/](https://stegosaurusdormant.com/bare-git-repo/)
 
-## NOTES
-This is a bare git repo. To update, use the 'config' command with any git command
+**Note**: this is a bare git repo. As such, traditional git commands will not work due to the repository being spread all over the home directory. For notes on performing commits and the like, see the section **`config` command**
 
-## Cloning
-* Be sure to clone this repo using `git clone --bare` with the repo url
-    * This will make sure it is a 'bare' repository and enable the `config` command functionality
-* Move the contents of the repo to ~/.config/dotfiles (this is where my zshrc will look)
+## Setup
+* Clone the repository (most anywhere will do, just make sure that HOME environment variable is set to your home folder)
+* Navigte to `<repo root>/.config/dotfiles`
+    + In here you will find a file named `setup.sh`, `chmod +x` that bad boy and run it
+    + This should move all the dotfiles to their designated locations. If this doesn't work, please submit a pull request or send me an email
+    + The actual `.git` folder will be located in `~/.config/dotfiles`
+* Make sure to edit your upstream repository if you want to copy these to your own Github account
+* TODO: make script install prerequisite packages
 
-## Prereqs
-Note: I haven't finished making this list yet, hold tight
-    - I might add a script to install these automatically
-* zsh
-* nvm
-* neovim
-* spotifyd
-* i3
-* notify-osd
-* polybar
-* qtile
-* brightnessctl
-  - python3
+## `config` command
+Make sure the following is in your favorite rc file (`.bashrc`, `.zshrc`, etc.):
 
-Note: to install packages from a file in arch linux you can use the following command:
-`sudo pacman -S --needed - < packages.txt`
-You just need create a file names `packages.txt` and write package names in line-by-line
+`alias config='git --git-dir=<path to git folder> --work-tree=$HOME'`
 
-## 'config' command
-* Make sure the following is in your favorite .rc:
-    `alias config='git --git-dir=<path to git folder> --work-tree=$HOME'`
-* Execute the following (after refreshing said .rc)
-    `config config --local status.showUntrackedFiles no`
+In my case, my git folder is `~/.config/doftiles`.
 
-This should allow you to use the `config` command
-* I recommend adding an `[alias]` to make adding all change files (that are also being tracked) easier.
-    * Add this to the config file in the `dotfiles` directory: `addtracked = !git add $(git ls-files)`
-    * It can be a headache when you use `git add .` by accident so, this is highly recommended
-    * To add all tracked files, use `config addtracked`. This will prevent git from adding any untracked files (as opposed to using `config add .`)
+This should already be included in my `.bashrc` and `.zshrc`. You can change the command to be anything you want, you don't have to use `config`.
+
+Now, whenever you want to make a change to your dotfiles, use `config` instead of `git` for any git command.
+
+I also recommend adding an `[alias]` to make adding all files with changes (that are also being tracked) easier. This should already be included in the `~/.config/dotfiles/config` file. If not, here is how you can add this to the config file in the `dotfiles` directory: `addtracked = !git add $(git ls-files)`.
+
+It can be a headache when you use `git add .` by accident as this will add the entire directory to the staging area so, this is highly recommended. To add all tracked files, use `config addtracked`. This will prevent git from adding any untracked files.
 
 ## Syncthing
-I highly recommend using syncthing if you want to sync files between devices. [Checkout this video for help](https://www.youtube.com/watch?v=PSx-BkMOPF4)
+I highly recommend using syncthing if you want to sync files between devices. [Check out this video for help](https://www.youtube.com/watch?v=PSx-BkMOPF4)
