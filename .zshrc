@@ -101,8 +101,7 @@ export DEBUGINFOD_URLS="https://debuginfod.archlinux.org"
 export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1     # Enabling this gets conda to stop whining
 
 # espup exports
-export PATH="$HOME/.rustup/toolchains/esp/xtensa-esp-elf/*/xtensa-esp-elf/bin:$PATH"
-export LIBCLANG_PATH="$HOME/.rustup/toolchains/esp/xtensa-esp32-elf-clang/*/esp-clang/lib"
+. $HOME/.cargo/export-esp.sh
 
 # Aliases
 alias rustnew="cargo new --bin"
