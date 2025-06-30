@@ -8,3 +8,5 @@ polybar
 qtile
 brightnessctl
 python3
+hyprland
+hyprpaper
