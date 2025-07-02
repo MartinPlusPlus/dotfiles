@@ -12,3 +12,4 @@ hyprland
 hyprpaper
 waybar
 inotify-tools
+ttf-ubuntu-mono-nerd

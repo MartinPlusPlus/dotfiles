@@ -63,7 +63,7 @@
   },
   "network": {
     "format-wifi": "<span color='#00FFFF'> 󰤨 </span>{essid} ",
-    "format-ethernet": "<span color='#7FFF00'> </span>Wired ",
+    "format-ethernet": "<span color='#7FFF00'>  </span> {ifname}",
     "tooltip-format": "<span color='#FF1493'> 󰅧 </span>{bandwidthUpBytes}  <span color='#00BFFF'> 󰅢 </span>{bandwidthDownBytes}",
     "format-linked": "<span color='#FFA500'> 󱘖 </span>{ifname} (No IP) ",
     "format-disconnected": "<span color='#FF4040'>  </span>Disconnected ",
@@ -104,24 +104,24 @@
   },
   "custom/temperature": {
     "exec": "sensors | awk '/^Package id 0:/ {print int($4)}'",
-    "format": "<span color='#FFA500'> </span>{}°C ",
+    "format": "<span color='#FFA500'>  </span>{}°C ",
     "interval": 5,
     "tooltip": true,
     "tooltip-format": "当前 CPU 温度: {}°C"
   },
   "memory": {
-    "format": "<span color='#8A2BE2'>  </span>{used:0.1f}G/ {total:0.1f}G ",
+    "format": "<span color='#8A2BE2'>  </span> {used:0.1f}G/{total:0.1f}G ",
     "tooltip": true,
     "tooltip-format": "Memory Usage: {used:0.2f}G/ {total:0.2f}G"
   },
   "cpu": {
-    "format": "<span color='#FF9F0A'>  </span>{usage}% ",
+    "format": "<span color='#FF9F0A'>   </span>{usage}% ",
     "tooltip": true
   },
   "clock": {
     "interval": 1,
     "timezone": "US/Denver",
-    "format": "<span color='#BF00FF'>  </span>{:%H: :%M} ",
+    "format": "<span color='#BF00FF'>  </span> {:%H:%M} ",
     "tooltip": true,
     "tooltip-format": "{:L%Y / %m / %d , %A}"
   },
