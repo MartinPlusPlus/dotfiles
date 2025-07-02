@@ -11,3 +11,4 @@ python3
 hyprland
 hyprpaper
 waybar
+inotify-tools
