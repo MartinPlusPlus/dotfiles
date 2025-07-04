@@ -22,8 +22,8 @@ export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
 
 # esp32 stuff 
-. $HOME/.cargo/export-esp.sh
-alias get_idf=". $HOME/.local/share/esp/esp-idf/export.sh"
+# . $HOME/.cargo/export-esp.sh
+# alias get_idf=". $HOME/.local/share/esp/esp-idf/export.sh"
 
 # Aliases
 alias cleanup="yay -Rns $(pacman -Qdtq)"

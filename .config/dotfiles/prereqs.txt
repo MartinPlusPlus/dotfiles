@@ -9,6 +9,7 @@ qtile
 brightnessctl
 python3
 hyprland
+hyprlock
 hyprpaper
 waybar
 inotify-tools
