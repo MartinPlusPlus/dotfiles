@@ -5,13 +5,13 @@
   "spacing": 0,
   "modules-left": [
     "hyprland/workspaces",
-    "tray",
     "custom/lock",
     "custom/reboot",
     "custom/power"
   ],
-  "modules-center": ["hyprland/window"],
+  "modules-center": ["clock"],
   "modules-right": [
+    "tray",
     "network",
     "battery",
     "bluetooth",
@@ -19,8 +19,7 @@
     "backlight",
     "custom/temperature",
     "memory",
-    "cpu",
-    "clock"
+    "cpu"
   ],
   "hyprland/workspaces": {
     "disable-scroll": false,
@@ -28,35 +27,23 @@
     "format": "{icon}",
     "on-click": "activate",
     "persistent-workspaces": {
-    "*":[1,2,3,4,5,6,7,8,9]
-    },
-    "format-icons": {
-      "1": "󰣇",
-      "2": "󰈹",
-      "3": "󰇮",
-      "4": "",
-      "5": "",
-      "6": "",
-      "7": "",
-      "8": "",
-      "9": "󰖳",
-      "default": ""
+    "*":[1,2,3,4,5]
     }
   },
   "custom/lock": {
-  "format": "<span color='#00FFFF'>  </span>",
+  "format": "<span color='#00FFFF'></span>",
   "on-click": "hyprlock",
   "tooltip": true,
   "tooltip-format": "Lock screen"
   },
   "custom/reboot": {
-    "format": "<span color='#FFD700'>  </span>",
+    "format": "<span color='#FFD700'></span>",
     "on-click": "systemctl reboot",
     "tooltip": true,
     "tooltip-format": "Reboot"
   },
   "custom/power": {
-    "format": "<span color='#FF4040'>  </span>",
+    "format": "<span color='#FF4040'></span>",
     "on-click": "systemctl poweroff",
     "tooltip": true,
     "tooltip-format": "Poweroff"
@@ -121,9 +108,9 @@
   "clock": {
     "interval": 1,
     "timezone": "US/Denver",
-    "format": "<span color='#BF00FF'>  </span> {:%H:%M} ",
+    "format": "<span color='#BF00FF'>   </span>{:%H:%M:%S} ",
     "tooltip": true,
-    "tooltip-format": "{:L%Y / %m / %d , %A}"
+    "tooltip-format": "{:%A %Y/%m/%d}"
   },
   "tray": {
     "icon-size": 15,
