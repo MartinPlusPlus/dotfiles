@@ -1,5 +1,3 @@
-print("[conform.nvim] loaded")
-
 local conform = require("conform")
 
 conform.setup({
